@@ -19,5 +19,8 @@ def sortByRoman(numbers):
 
 numbers = [2, 5, 32, 45, 55, 56, 57, 61]
 print(sortByBinary(numbers))
+# result: [2, 32, 5, 56, 45, 57, 55, 61]
+
 names = ['barbara V', 'barbara III', 'matheus X', 'matheus III', 'zuma I']
 print(sortByRoman(names))
+# result : ['barbara III', 'barbara V', 'matheus III', 'matheus X', 'zuma I']
