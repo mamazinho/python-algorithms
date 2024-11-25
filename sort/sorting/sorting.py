@@ -29,13 +29,19 @@ def mergesort(lista, inicio=0, fim=None):
         fim = len(lista)
     if(fim - inicio > 1):
         meio = (fim + inicio)//2
+        print("INICIO MEIO AQUI", lista, inicio, meio, fim)
         mergesort(lista, inicio, meio)
+        print("MEIO FIM AQUI", lista, inicio, meio, fim)
         mergesort(lista, meio, fim)
+        print("CHAMA MERGE AQUI", lista, inicio, meio, fim)
         merge(lista, inicio, meio, fim)
 
 def merge(lista, inicio, meio, fim):
     left = lista[inicio:meio]
     right = lista[meio:fim]
+    print("LISTA", lista, inicio, fim)
+    print("LISTA ESQUERDA", left)
+    print("LISTA DIREITA", right)
     top_left, top_right = 0, 0
     for k in range(inicio, fim):
         if top_left >= len(left):
