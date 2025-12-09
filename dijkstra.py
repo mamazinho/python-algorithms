@@ -15,11 +15,11 @@ def dijkstra(grafo, origem):
         # Encontra o vértice não visitado com menor distância atual
         vertice_atual = None
         menor_distancia = sys.maxsize
-        for v in grafo:
-            print(f"dentro do for, {v=}, {distancias[v]=}, {menor_distancia=}, {vertice_atual=}")
-            if v not in visitados and distancias[v] < menor_distancia:
-                vertice_atual = v
-                menor_distancia = distancias[v]
+        for vertice in grafo:
+            print(f"dentro do for, {vertice=}, {distancias[vertice]=}, {menor_distancia=}, {vertice_atual=}")
+            if vertice not in visitados and distancias[vertice] < menor_distancia:
+                vertice_atual = vertice
+                menor_distancia = distancias[vertice]
 
         print(f"depois do primeiro for, {menor_distancia=}, {vertice_atual=}, {visitados=}")
         # Marca o vértice atual como visitado
